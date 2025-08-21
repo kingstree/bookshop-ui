@@ -1,0 +1,12 @@
+.coming-soon-banner-2{
+    background: url(../media/backgrounds/coming-soon-banner.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1020px ;
+    .content{
+        height: 1020px;
+        display: grid;
+        align-content: center;
+        padding-left: 30px;
+    }
+}

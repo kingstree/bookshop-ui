@@ -1,0 +1,215 @@
+// Blog Section
+.blog-section {
+
+    .blog-box {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        padding: 32px;
+        border-radius: 20px;
+        box-shadow: $shadow;
+
+        @include media-query(1199px) {
+            margin-bottom: 24px;
+        }
+
+        .blog-img {
+            a {
+                overflow: hidden;
+                border-radius: 10px;
+                
+                img {
+                    -webkit-transition: all 0.25s linear 0s;
+                    transition: all 0.25s linear 0s;
+    
+                    @include media-query(1199px) {
+                        width: 100%;
+                    }
+    
+                    @include media-query(992px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .name-date {
+            display: flex;
+            gap: 16px;
+
+            .writer-name {
+                display: inline-flex;
+                align-items: flex-start;
+                border-right: 2px solid $medium-gray;
+                gap: 8px;
+            }
+
+            .date {
+                display: flex;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+        &:hover{
+            .blog-img{
+                a{
+                    img{
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                        -webkit-transition: all 0.25s linear 0s;
+                        transition: all 0.25s linear 0s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Blog Banner-3
+.hero-banner-3 {
+    position: relative;
+    height: 316px;
+    padding: 16px 0;
+
+    .text-block {
+        display: grid;
+        height: 100%;
+        align-content: center;
+    }
+
+    .images-row {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        justify-content: end;
+
+        @include media-query(992px) {
+            gap: 12px;
+            padding: 32px;
+        }
+
+        @include media-query(768px) {
+            padding: 0;
+            justify-content: center;
+        }
+
+        @include media-query(576px) {
+            padding-top: 32px;
+        }
+
+        .blog-img {
+            border-radius: 24px;
+            box-shadow: $shadow-2;
+
+            @include media-query(992px) {
+                width: 130px;
+            }
+
+            @include media-query(768px) {
+                width: 100px;
+            }
+
+            @include media-query(576px) {
+                width: 80px;
+                border-radius: 15px;
+            }
+
+            &.big {
+                @include media-query(992px) {
+                    width: 160px;
+                }
+
+                @include media-query(768px) {
+                    width: 130px;
+                }
+
+                @include media-query(576px) {
+                    width: 100px;
+                    border-radius: 15px;
+
+                }
+            }
+        }
+    }
+}
+
+
+// Input Field 
+.input-field {
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    border: 1px solid $medium-gray;
+    border-radius: 30px;
+    padding: 10px 8px 10px 24px;
+    align-items: center;
+    margin: 0 auto;
+    gap: 24px;
+    width: 840px;
+
+    @include media-query(992px) {
+        width: 700px;
+    }
+
+    @include media-query(768px) {
+        width: 520px;
+    }
+
+    @include media-query(576px) {
+        width: 400px;
+        padding: 10px 8px 10px 10px;
+    }
+
+    .categories {
+        width: 142px;
+        background: transparent;
+
+        @include media-query(576px) {
+            width: 120px;
+        }
+
+        .search-select {
+            border: none;
+            background: transparent;
+            color: $dark-gray;
+        }
+    }
+
+    .vl {
+        height: 32px;
+        width: 1px;
+        border-right: 1px solid $medium-gray;
+
+        @include media-query(576px) {
+            border: none;
+        }
+    }
+
+    .input-search {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .search-books {
+            background: transparent;
+            border: none;
+        }
+
+        button {
+            border: 0;
+            background: transparent;
+
+            @include media-query(576px) {
+                translate: -120%;
+            }
+
+            i {
+                padding: 12px;
+                color: $white;
+                background-color: $accent-1;
+                border-radius: 30px;
+
+            }
+        }
+    }
+}

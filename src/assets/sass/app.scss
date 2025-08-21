@@ -1,0 +1,129 @@
+/*---------------------------------------------"
+// Template Name: Book Store
+// Template URL: https://techpedia.co.uk/template/striker
+// Description:  Book Store - A Book Store Html Template
+// Version: 1.0.0
+
+===============================================   
+STYLE SHEET INDEXING
+|
+|___ Fonts
+|___ Variables
+|___ Responsive
+|___ Reset Styles
+|___ Spacing
+|___ Helper Classes
+|___ Buttons
+|___ Headings
+|___ Layout Styles
+|___ END STYLE SHEET INDEXING
+
+--------------------------------------------*/
+
+/*-------------------------
+    Fonts
+-------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/*-------------------------
+    Variables
+-------------------------*/
+/* Fonts */
+$font-primary: 'Inter', sans-serif;
+$font-awesome: "Font Awesome 5 Pro";
+
+/* Colors */
+$accent-1:#FA9A41;
+$accent-2: #FA9A41B2;
+$accent-3:#64C7FF;
+$white: #F8F8FF;
+$black: #2C3435;
+$light-black: #212627;
+$medium-black: #16191A;
+$light-gray: #C6CBD2;
+$lightest-gray: #F3F3F7;
+$medium-gray: #9EA2A8;
+$dark-gray:#7A7F85;
+$neutral-gray:#D4D8DD;
+
+/* Transitions */
+$transition: all 0.5s ease;
+
+/* Gradients */
+
+/* Shadows */
+$shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 1px 1px 2px 0px rgba(0, 0, 0, 0.04), 4px 3px 4px 0px rgba(0, 0, 0, 0.03), 8px 6px 6px 0px rgba(0, 0, 0, 0.02), 14px 11px 7px 0px rgba(0, 0, 0, 0.01), 22px 17px 8px 0px rgba(0, 0, 0, 0.00);
+$shadow-2: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 1px 2px 5px 0px rgba(0, 0, 0, 0.10), 5px 8px 9px 0px rgba(0, 0, 0, 0.09), 10px 17px 12px 0px rgba(0, 0, 0, 0.05), 18px 30px 14px 0px rgba(0, 0, 0, 0.01), 28px 48px 15px 0px rgba(0, 0, 0, 0.00);
+/*-------------------------
+    Reset Styles
+-------------------------*/
+@import "basic/basic";
+
+/*-------------------------
+Helpers
+-------------------------*/
+@import "helpers/classes";
+
+@import "helpers/mixin";
+
+@import "helpers/spacing";
+
+/*-------------------------
+Elements
+-------------------------*/
+@import "elements/preloader";
+
+@import "elements/buttons";
+
+@import "elements/form";
+
+@import "elements/heading";
+
+@import "elements/dropdown";
+
+/*-------------------------
+  layouts
+-------------------------*/
+@import "layout/header";
+
+@import "layout/footer";
+
+@import "layout/sidebar";
+
+@import "layout/hero-banner";
+
+@import "layout/shop-listing";
+
+@import "layout/cards";
+
+@import "layout/slider";
+
+@import "layout/about";
+
+@import "layout/inner-banner";
+
+@import "layout/coming-soon-banner";
+
+@import "layout/contact";
+
+@import "layout/product-detail"; 
+
+@import "layout/cart";
+
+@import "layout/checkout";
+
+@import "layout/blog"; 
+
+@import "layout/signup";
+
+@import "layout/login";
+
+@import "layout/error";
+
+@import "layout/pagination";
+
+@import "layout/coming-soon";
+
+@import "layout/testimonials";
+
+@import "layout/blog-detail";

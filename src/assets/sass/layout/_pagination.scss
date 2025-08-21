@@ -1,0 +1,30 @@
+// Numbering Circles Blog-Page
+.page-numbers{
+    .page-circles{
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        .numbering-circle{
+            width: 48px;
+            height: 48px;
+            border-radius: 50px;
+            background-color: $lightest-gray;
+            box-shadow: $shadow;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &.active{
+                background-color: $accent-1;
+                color: $white;
+                transition: $transition;
+            }
+            &:hover{
+                background-color: $accent-1;
+                color: $white;
+                transition: $transition;
+            }
+        }
+        
+    }
+}

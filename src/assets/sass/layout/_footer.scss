@@ -1,0 +1,100 @@
+// Newsletter
+.newsletter{
+    background: url(../media/backgrounds/newslatter.png);
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 47px 0;
+    .newsletter-text{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        
+        h2{
+            font-size: 47px;
+            font-weight: 500;
+            @include media-query(767px) {
+            font-size: 36px;
+            }
+            @include media-query(482px) {
+            font-size: 26px;
+            }
+        }
+            .find-books-input {
+                position: relative;
+                .search-input {
+                    display: flex;
+                    width: 666px;
+                    padding: 16px 8px 16px 24px;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-radius: 30px;
+                    border: none;
+                    box-shadow: $shadow;
+                    @include media-query(767px) {
+                        width: 400px;
+                    }
+                    @include media-query(482px) {
+                        width: 350px;
+                    }
+                }
+        
+                a {
+                    position: absolute;
+                    top: 6px;
+                    right: 10px;
+                    background-color: $accent-1;
+                    padding: 8px;
+                    border-radius: 30px;
+                }
+        }
+    }
+}
+// Footer
+.books-category{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include media-query(767px){
+        padding: 20px;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        li{
+        }
+    }
+
+}
+.footer-center-area{
+    display: grid;
+    gap: 24px;
+    justify-items: center;
+    text-align: center;
+    margin-top: 40px;
+    height: 200px;
+    @include media-query(992px) {
+        border: 0px;
+        height: auto;
+
+    }
+    .cell-no{
+        font-size: 27px;
+        font-weight: 500;
+    }
+    .social-icons{
+        display: flex;
+        gap: 16px;
+        img{
+            color: $medium-black;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+.rights-content{
+    text-align: center;
+}

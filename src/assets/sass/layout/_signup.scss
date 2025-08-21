@@ -1,0 +1,63 @@
+.signup{
+    .form-block{
+        padding: 40px 24px;
+        border-radius: 30px;
+        box-shadow: $shadow;
+        .link-btn{
+            border: 1px solid $medium-gray;
+            border-radius: 30px;
+            padding: 12px;
+            display: flex;
+            gap: 12px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        form{
+            .form-control{
+                background-color: $lightest-gray;
+                border: 1px solid $medium-gray;
+                border-radius: 30px;
+                color: $black;
+                padding: 16px 16px;
+            }
+            .submit-button{
+                position: relative;
+            }
+            button{
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .or{
+            position: relative;
+            text-align: center;
+            &::after, &::before{
+                content: "";
+                height: 1px;
+                width: 46%;
+                position: absolute;
+                top: 14px;
+                background: #D4D8DD;
+                @include media-query(575px) {
+                    top: 12px;
+                }
+            }
+            &::after{
+                right: 0;
+            }
+            &::before{
+                left: 0;
+            }
+        }
+    }
+    .sign-up-image{
+
+        @include media-query(1199px){
+            width: 100%;
+        }
+        @include media-query(992px){
+            margin-top: 24px;
+        }
+    }
+}

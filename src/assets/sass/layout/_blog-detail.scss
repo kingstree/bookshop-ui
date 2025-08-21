@@ -1,0 +1,330 @@
+// Blog Details
+.blogs {
+    .blog-title {
+        .tag-name-date {
+            display: flex;
+            padding: 0px;
+            align-items: baseline;
+            gap: 24px;
+
+            .category-tag {
+                display: flex;
+                gap: 10px;
+                background-color: rgba(250, 154, 65, 0.20);
+                padding: 8px 16px;
+                width: fit-content;
+                border-radius: 30px;
+
+                h6 {
+                    color: $accent-1;
+                }
+            }
+
+            .name-date{
+                display: flex;
+                gap: 16px;
+                .writer-name{
+                    display: inline-flex;
+                    align-items: flex-start;
+                    border-right: 2px solid $medium-gray;
+                    gap: 8px;
+                }
+                .date{
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 8px;
+                }
+            }
+        }
+    }
+
+    .blog-img {
+        img {
+            border-radius: 20px;
+            box-shadow: $shadow;
+        }
+    }
+
+    .small-images {
+        display: flex;
+        gap: 24px;
+    }
+
+    .color-box {
+        position: relative;
+        background-color: rgba(250, 154, 65, 0.20);
+        display: flex;
+        padding: 48px 16px;
+        justify-content: center;
+        align-items: center;
+        border-left: 2px solid $accent-1;
+        border-right: 2px solid $accent-1;
+        border-radius: 10px;
+        margin-top: 65px;
+
+        .qoutes {
+            position: absolute;
+            top: -40px;
+        }
+    }
+
+    // Blog Detail- Client Reply
+    .comments-sec {
+        .comment-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+
+            @include media-query(575px) {
+                gap: 12px;
+            }
+
+            img {
+                border-radius: 10px;
+
+                @include media-query(575px) {
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+
+            .top-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+
+                .info {
+                    width: 100%;
+                }
+
+                .accordion-button {
+                    display: block !important;
+                    text-align: end;
+                    width: fit-content;
+                }
+
+                .reply-btn {
+                    font-family: $font-primary;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 150%;
+                    letter-spacing: 0.32px;
+
+                    @media(max-width: 992px) {
+                        font-size: 15px;
+                    }
+
+                    @media(max-width: 767px) {
+                        font-size: 14px;
+                    }
+
+                    @media(max-width: 575px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .reply {
+                display: flex;
+                gap: 24px;
+                align-items: flex-start;
+
+                @include media-query(575px) {
+                    gap: 12px;
+                }
+            }
+
+            .write-comment-box {
+                .input-group {
+                    margin-bottom: 24px;
+
+                    button {
+                        background: $black;
+                        color: $accent-1;
+                        padding-right: 12px;
+                        font-weight: 600;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // Comment Form
+    .right-content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .tags {
+            display: grid;
+            gap: 12px;
+
+            .three-tags {
+                display: flex;
+                gap: 12px;
+
+            }
+
+            .category-tag {
+                display: flex;
+                gap: 10px;
+                background-color: rgba(250, 154, 65, 0.20);
+                padding: 8px 16px;
+                width: fit-content;
+                border-radius: 30px;
+
+                h6 {
+                    color: $accent-1;
+                }
+            }
+
+            .category-tag-2 {
+                display: flex;
+                gap: 10px;
+                background-color: rgba(37, 234, 139, 0.2);
+                padding: 8px 16px;
+                width: fit-content;
+                border-radius: 30px;
+
+                h6 {
+                    color: #25EA8B;
+                }
+            }
+
+            .category-tag-3 {
+                display: flex;
+                gap: 10px;
+                background-color: rgba(4, 132, 251, 0.2);
+                padding: 8px 16px;
+                width: fit-content;
+                border-radius: 30px;
+
+                h6 {
+                    color: #0484FB;
+                }
+            }
+        }
+
+        .recent-articles {
+            .article-box {
+                display: flex;
+                padding: 16px;
+                gap: 16px;
+                border-radius: 10px;
+
+                .image-area {
+                    img {
+                        border-radius: 5px;
+                    }
+                }
+
+                .content-area {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                }
+            }
+        }
+    }
+}
+
+// Categories Check Boxes
+.filter-block {
+    border-bottom: 1px solid $white;
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .list {
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &.cart-list{
+                justify-content: flex-start;
+            }
+        }
+        .filter-checkbox {
+            input {
+                padding: 0;
+                display: none;
+                border: 1px solid $medium-black;
+                cursor: pointer;
+
+                &:checked+label {
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 4px;
+                        left: 5px;
+                        width: 5px;
+                        height: 12px;
+                        z-index: 10;
+                        border: solid $medium-black;
+                        border-width: 0 2px 2px 0;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            label {
+                position: relative;
+                cursor: pointer;
+                color: $dark-gray;
+                font-family: $font-primary;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 130%;
+
+                @media(max-width: 992px) {
+                    font-size: 14px;
+                }
+
+                @media(max-width: 767px) {
+                    font-size: 12px;
+                }
+
+                @media(max-width: 575px) {
+                    font-size: 12px;
+                }
+
+                &:before {
+                    content: "";
+                    -webkit-appearance: none;
+                    background: transparent;
+                    border: 1px solid $medium-black;
+                    border-radius: 3px;
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                    position: relative;
+                    vertical-align: middle;
+                    cursor: pointer;
+                    margin-right: 8px;
+                    margin-top: -3px;
+                }
+                &.black-color{
+                    color: $black;
+                }
+                &.cart-font{
+                    font-size: 21px;
+                    @media(max-width: 992px) {
+                        font-size: 18px;
+                    }
+    
+                    @media(max-width: 767px) {
+                        font-size: 16px;
+                    }
+    
+                    @media(max-width: 575px) {
+                        font-size: 14px;
+                    }
+                  }
+            }
+        }
+    }
+}

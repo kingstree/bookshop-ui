@@ -1,0 +1,129 @@
+// Contact Form
+.form-map{
+    .form-section{
+        padding: 24px;
+        border-radius: 30px;
+        box-shadow: $shadow;
+        // @include media-query(820px){
+        //     margin-bottom: 24px;
+        // }
+        .link-btn{
+            border: 2px solid $medium-gray;
+            border-radius: 30px;
+            padding: 15px;
+            display: flex;
+            gap: 12px;
+            text-align: center;
+            align-items: center;
+        }
+        form{
+            .form-control{
+                background-color: $lightest-gray;
+                border: 1px solid $medium-gray;
+                border-radius: 30px;
+                color: $black;
+                padding: 15px;
+            }
+            .submit-button{
+                position: relative;
+            }
+            button{
+                display: flex;
+                justify-content: center;
+                padding: 15px 32px 15px 8px;;
+            }
+        }
+    }
+    .map-block{
+        display: flex;
+        iframe{
+            width: 636px;
+            height: 531px;
+            border-radius: 30px;
+            box-shadow: $shadow;
+        }
+    }
+}
+.faq{
+    .accordion{
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .accordion-item{
+            background-color: $lightest-gray;
+            box-shadow: $shadow;
+            border-radius: 0px 0px 10px 10px;
+            border: none !important; 
+            
+            
+            :first-of-type{
+                .accordion-header {
+                    border: none;
+                }
+                .accordion-button{
+                    color: $black;
+                    font-weight: 500;
+                    border: none;
+                    background-color: $lightest-gray;
+                    display: flex;
+                    gap: 8px;
+                    padding: 0 0.75rem;
+                    
+                }
+            }
+            
+            .accordion-button{
+                display: flex;
+                gap: 8px;
+                background-color: $lightest-gray;
+                
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+            .accordion-header {
+                border: none;
+            }
+            .accordion-body {
+                background-color: $lightest-gray;
+            }
+        }
+    }
+    .faq-form{
+        padding: 24px;
+        border-radius: 30px;
+        box-shadow: $shadow;
+        .link-btn{
+            border: 2px solid $medium-gray;
+            border-radius: 30px;
+            padding: 15px;
+            display: flex;
+            gap: 12px;
+            text-align: center;
+            align-items: center;
+        }
+        form{
+            .form-control{
+                background-color: $lightest-gray;
+                border: 1px solid $medium-gray;
+                border-radius: 30px;
+                color: $black;
+                padding: 15px;
+                &.comment{
+                    padding: 70px 10px;
+                }
+            }
+            .submit-button{
+                position: relative;
+            }
+            button{
+                display: flex;
+                justify-content: center;
+                padding: 15px 32px 15px 8px;;
+            }
+        }
+    }
+}

@@ -1,0 +1,288 @@
+//  New Arrivals
+.new-arrivals {
+    .top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+        .arrivals-card {
+            position: relative;
+            background-color: $lightest-gray;
+            border-radius: 30px;
+            padding: 48px;
+            gap: 24px;
+            transition: $transition;
+            img{
+            border-radius: 20px;
+                
+            } 
+            .hover-buttons {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 40px;
+
+                ul {
+                    display: grid;
+                    gap: 8px;
+                    @include media-query(1399px) {
+                        gap: 0px;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    li {
+                        background-color: $white;
+                        box-shadow: $shadow;
+                        width: 40px;
+                        height: 40px;
+                        gap: 8px;
+                        border-radius: 30px;
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        transition: $transition;
+                        
+
+                        &:hover {
+                            background-color: $accent-1;
+                        }
+                    }
+                }
+            }
+
+            .arrivals-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 24px;
+                @include media-query(1399px) {
+                    gap: 0px;
+                }
+                
+                .rating-stars {
+                    gap: 4px;
+                    padding: 8px 0px;
+                    color: $accent-1;
+                }
+
+                .arrivals-price {
+                    display: flex;
+                    width: 320px;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-top: 24px;
+                    gap: 4px;
+                    @include media-query(1399px) {
+                        display: block;
+                        gap: 8px;
+                        padding-top: 24px;
+                    }
+                    
+                    .old-price {
+                        text-decoration-line: line-through;
+                        color: $medium-gray;
+                    }
+                    .plain-text{
+                        text-decoration-line: none;
+                    }
+                }
+            }
+            &:hover{
+                box-shadow: $shadow;
+                cursor: pointer;
+            }
+        }
+}
+
+// Deal of This Week 1
+.weekly-deals{
+    .book-img{
+        width: 168px;
+        height: 252px;
+        @include media-query (1399px){
+            width: 168px;
+            height: 230px;
+        }
+        @include media-query (1199px){
+            width: 168px;
+            height: 260px;
+        }
+        @include media-query (992px){
+            width: 168px;
+            height: 230px;
+        }
+        @include media-query (399px){
+            width: auto;
+            height: auto;
+        }
+    }
+    .book-price{
+        display: flex;
+        align-items: center;
+        @include media-query (1399px){
+            margin: 16px 0;
+        }
+        @include media-query (1199px){
+            margin: 8px 0;
+        }
+    }
+    .progress{
+        height: 3px;
+        background-color: $medium-gray;
+        .progress-bar{
+            background-color: #64C7FF;
+        }
+    }
+    .deal-right-area{
+        background: radial-gradient(109.98% 137.68% at 97.16% 0%, #A1E9FF 0%, #7389FF 39.41%, #081F73 100%);
+        box-shadow: $shadow;
+        border-radius: 20px;
+        .text-block{
+        
+        }
+        .main-img{
+            border-radius: 0 0 20px 20px;
+            width: 100%;
+        }
+    }
+}
+// Deal of This Week Slider
+.weekly-deals-2{
+    h3 {
+        position: relative;
+          &:after {
+            content: "";
+            display: flex;
+            width: 55%;
+            left: 315px;
+            height: 2px;
+            background: $neutral-gray;
+            right: 168px;
+            top: 50%;
+            position: absolute;
+      
+            @include media-query(1499px) {
+              width: 50%;
+              left: 290px;
+            }
+      
+            @include media-query(1198px) {
+              width: 42%;
+              left: 300px;
+            }
+      
+            @include media-query(989px) {
+              display: none;
+            }
+          }
+        }
+    .week-deal-card{
+        .img-box{
+            img{
+                margin: 0 auto;
+            }
+        }
+        .content-box{
+            margin-top: -148px;
+            background: $lightest-gray;
+            padding: 172px 24px 48px;
+            text-align: center;
+            border-radius: 30px;
+            box-shadow: $shadow;
+            @include media-query(1199px) {
+                margin-right: 16px;
+            }
+            .price-row{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
+                .old-price{
+                    text-decoration-line: line-through;
+                    color: $medium-gray;
+                }
+            }
+            .cus-btn-2{
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+// Trending Book Cards
+.book-card {
+    position: relative;
+    background-color: $lightest-gray;
+    border-radius: 30px;
+    box-shadow: $shadow;
+    padding: 24px;
+    overflow: hidden;
+    img{
+        width: 100%;
+        border-radius: 20px;
+    }
+    .hover-buttons {
+      position: absolute;
+      top: 24px;
+      right: -70px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: $transition;
+      li {
+        background-color: $white;
+        box-shadow: $shadow;
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        transition: $transition;
+        i{
+            color: $black;
+            transition: $transition;
+            &:hover{
+                color: $white;
+            }
+        }
+        &:hover {
+          background-color: $accent-1;
+          color: $white;
+        }
+      }
+    }
+    &:hover{
+      .hover-buttons {
+        color: $black;
+        right: 40px;
+        top: 40px;
+      }
+    }
+
+    .book-content {
+        text-align: start;
+      .rating-stars {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: $accent-1;
+      }
+
+      .books-price {
+        display: flex;
+        padding-top: 24px;
+        gap: 4px;
+
+        .old-price {
+            text-decoration-line: line-through;
+            color: $medium-gray;
+        }
+      }
+    }
+}
+
+
+

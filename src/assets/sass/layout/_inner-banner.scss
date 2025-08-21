@@ -1,0 +1,37 @@
+// Lower Banner Image
+.inner-banner-1{
+    background: url(../media/banner/lower-banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0;
+    .banner-img{
+        box-shadow: $shadow;
+        border-radius: 15px;
+    }
+}
+
+// Lower Banner Image 2
+.inner-banner-2{
+    background: url(../media/banner/lower-banner-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0;
+    .inner-card{
+        .title-text{
+            color: $white;
+            transition: $transition;
+        }
+        img{
+            box-shadow: $shadow;
+            border-radius: 15px;
+        }
+        &:hover{
+            .title-text{
+                color: $accent-1;
+            }
+        }
+    }
+}
+

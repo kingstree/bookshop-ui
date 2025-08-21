@@ -1,0 +1,12 @@
+.heading{
+    margin-bottom: 48px;
+    @include short-query(992px , 1199px) {
+        margin-bottom: 42px;
+    }
+    @include short-query(768px , 991px) {
+        margin-bottom: 36px;
+    }
+    @include media-query(767px) {
+        margin-bottom: 32px;
+    }
+}

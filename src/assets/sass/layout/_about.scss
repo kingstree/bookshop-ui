@@ -1,0 +1,177 @@
+.about-banner {
+    width: 100%;
+    position: relative;
+    .content{
+        position: relative;
+        h1{
+            @include media-query(767px) {
+                font-size: 34px;
+            }
+        }
+        .our-community{
+            transform: translate(13%, 0px);
+            flex-wrap: wrap;
+            display: flex;
+            gap: 16px;
+            @include media-query(1399px) {
+                left: 35%;
+                bottom: -20px;
+            }
+            @include media-query(992px) {
+                left: 20%;
+            }
+            @include media-query(767px) {
+                position: relative;
+                left: auto;
+                bottom: auto;
+                transform: translate(0);
+                margin-top: 32px;
+            }
+            @include media-query(492px) {
+                justify-content: center;
+                gap: 8px;
+            }
+            .community-block{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                .community-img{
+                    margin-right: 16px;
+                    img{
+                        border: 1px solid $white;
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 48px;
+                        margin-right: -16px;
+                        position: relative;
+                        z-index: 20;
+                        &:nth-child(2){
+                            z-index: 15;
+                        }
+                        &:nth-child(3){
+                            z-index: 10;
+                        }
+                        &:nth-child(4){
+                            z-index: 5;
+                        }
+                    }
+                }
+            }
+        }
+        .our-story-img{
+            img{
+                border-radius: 20px;
+                box-shadow: $shadow;
+            }
+        }
+    }
+}
+.our-vision{
+    .image-block{
+        position: relative;
+        display: flex;
+        
+        img{
+            position: relative;
+            top: 0;
+            display: flex;
+            border-radius: 20px;
+        }
+        .ceo-block{
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            background-color: $white;
+            padding: 16px;
+            border-radius: 15px;
+            box-shadow: $shadow;
+            margin: 32px;
+            .ceo-info{
+                display: flex;
+                flex-direction: column;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    border-radius: 160px;
+                }
+            }
+            .qoutes{
+                display: flex;
+                justify-items: self-start;
+                .ceo-msg{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    
+                }
+            }
+            .qoutes-2{
+                float: right;
+            }
+            @include media-query(576px){
+                bottom: 0px;
+                padding: 8px;
+                margin: 24px;
+            }
+        }
+    }
+}
+
+.our-values{
+    .accordion{
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .accordion-item{
+            background-color: $lightest-gray;
+            box-shadow: $shadow;
+            border-radius: 0px 0px 10px 10px;
+            border: none !important; 
+            
+            
+            :first-of-type{
+                .accordion-header {
+                    border: none;
+                }
+                .accordion-button{
+                    border: none;
+                    background-color: $lightest-gray;
+                    display: flex;
+                    gap: 8px;
+                    padding: 0 0.75rem;
+                    
+                }
+            }
+            
+            .accordion-button{
+                display: flex;
+                gap: 8px;
+                background-color: $lightest-gray;
+                
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+            .accordion-header {
+                border: none;
+            }
+            .accordion-body {
+                background-color: $lightest-gray;
+            }
+        }
+    }
+    .value-img{
+        img{
+            border-radius: 20px;
+            box-shadow: $shadow;
+            
+        }
+        @include media-query(1199px){
+         margin-top: 24px;       
+        }
+    }
+}

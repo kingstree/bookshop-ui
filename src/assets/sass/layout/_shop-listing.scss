@@ -1,0 +1,76 @@
+// Option Bar
+.option-bar{
+    display: flex;
+    .results-categories{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        .right-side-icons{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            select{
+                border: none;
+                background: transparent;
+                
+            }
+        }
+    }
+}
+// Shop-Lisiting-Grid
+.shop-list-grid{
+    .product-grid{
+        .product-list-card{
+            margin-bottom: 24px;
+            padding: 24px;
+            background: $lightest-gray;
+            border-radius: 20px;
+            box-shadow: $shadow;
+            
+            .image-block{
+                img{
+                    border-radius: 15px;
+                    box-shadow: $shadow;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .content-block{
+                display: grid;
+                height: 100%;
+                align-content: center;
+                gap: 16px;
+                .rating-stars{
+                    margin-top: -16px;
+                }
+                .book-text{
+                    @include media-query(992px){
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3; 
+                        line-clamp: 3; 
+                        -webkit-box-orient: vertical;
+                    }
+                }
+                .cart-button{
+                    display: flex;
+                    gap: 24px;
+                    .hover-buttons{
+                        display: flex;
+                        align-items: center;
+                        gap: 24px;
+                        li{
+                            background-color: $white;
+                            box-shadow: $shadow;
+                            padding: 8px;
+                            border-radius: 30px;
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
+

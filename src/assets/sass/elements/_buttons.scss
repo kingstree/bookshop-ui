@@ -1,0 +1,136 @@
+.back-to-top {
+    position: fixed;
+    bottom: 0px;
+    right: 12px;
+    display: block;
+    width: 120px;
+    height: 120px;
+    font-size: 100px;
+    padding: 11px 0;
+    background: $accent-1;
+    color: $white;
+    text-align: center;
+    opacity: 0;
+    text-decoration: none;
+    border-radius: 100px;
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
+    z-index: 999;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+
+    &.show {
+        opacity: 1;
+    }
+
+    @include media-query(490px) {
+        right: -20px;
+        bottom: -20px;
+    }
+}
+
+.cus-btn {
+
+    font-family: $font-primary;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.32px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: $transition;
+    padding: 8px 32px 8px 8px;
+    background-color: $accent-1;
+    border-radius: 30px;
+    font-family: inherit;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.5s;
+    z-index: 1;
+    color: $white;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 100%;
+        transition: all 0.7s;
+        z-index: -1;
+        background: $medium-black;
+        height: 200px;
+        width: 300px;
+        border-radius: 50%;
+    }
+    &:hover {
+        color: $white;
+        &:before {
+            top: -30px;
+            left: -30px;
+        }
+    }
+    &:active{
+        &:before {
+            background: $accent-1;
+            transition: background 0s;
+        }
+    }
+
+    &.small {
+        padding: 8px 16px 8px 8px;
+        border: none;
+
+        .icon {
+            width: clamp(16px, 1.25vw, 48px);
+            height: clamp(16px, 1.25vw, 48px);
+            img{
+                width: clamp(8px, 0.625vw, 32px);
+                height  : clamp(8px, 0.625vw, 32px);
+            }
+        }
+    }
+
+    .icon {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        background-color: $white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        img {
+            object-fit: cover;
+        }
+    }
+    
+    &.invert {
+        background-color: $white;
+        color: $black;
+        margin: 0px auto 16px;
+
+        img {
+            color: $accent-1;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $accent-1;
+            transition: $transition;
+            box-shadow: $shadow;
+        }
+    }
+
+    &.bg-white {
+        background-color: $white;
+        color: $accent-1;
+        padding: 0;
+    }
+}

@@ -1,0 +1,197 @@
+
+.top-row{
+    display: flex;
+    align-items: center;
+    @include media-query(572px){
+        display: block;
+    }
+    .right-block{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        
+        .time-period{
+            display: flex;
+            select{
+                background: transparent;
+                border: none;
+            }
+        }
+        &.list-2{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 24px;
+        }
+        .nav{
+            .nav-item{
+                .nav-link{
+                    border: 0px;
+                    opacity: 0.9;
+                    &.active{
+                        background: $lightest-gray;
+                        border-radius: 6.5px;
+                        border: 0px;
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
+    }
+    &.blog-bar{
+        justify-content: space-between;
+    }
+    
+}
+// Side-Bar Shop Listing
+.filters{
+        
+        .filter-block{
+            border-bottom: 1px solid $white;
+            padding: 32px 0;
+            .title{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .list{
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .filter-checkbox{
+                    input {
+                        padding: 0;
+                        display: none;
+                        border: 1px solid $medium-black;
+                        cursor: pointer;
+                        &:checked + label{
+                            &:after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 3px;
+                                left: 5px;
+                                width: 5px;
+                                height: 12px;
+                                z-index: 10;
+                                border: solid $medium-black;
+                                border-width: 0 2px 2px 0;
+                                transform: rotate(45deg);
+                            }
+                        }
+                    }
+                    label {
+                        position: relative;
+                        cursor: pointer;
+                        color: $dark-gray;
+                        font-family: $font-primary;
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 130%;
+                        @media(max-width: 992px) {
+                            font-size: 14px;
+                        }
+                        @media(max-width: 767px) {
+                            font-size: 12px;
+                        }
+                        @media(max-width: 575px) {
+                            font-size: 12px;
+                        }    
+                        &:before {
+                            content: "";
+                            -webkit-appearance: none;
+                            background: transparent;
+                            border: 1px solid $medium-black;
+                            border-radius: 3px;
+                            width: 16px;
+                            height: 16px;
+                            display: inline-block;
+                            position: relative;
+                            vertical-align: middle;
+                            cursor: pointer;
+                            margin-right: 8px;
+                            margin-top: -3px;
+                        }
+                    }
+                }
+            }
+            .slider-track{
+                .irs--big{
+                    height: 22px;
+                    margin-bottom: 0;
+                    .irs-line {
+                        top: 12px;
+                        height: 5px;
+                        border: 1px solid $light-gray;
+                        background: $light-gray;
+                        cursor: pointer;
+                        border-radius: 0;
+            
+                    }
+                    .irs-bar {
+                        top: 12px;
+                        height: 5px;
+                        border: 1px solid $accent-1;
+                        background: $accent-1;
+                        box-shadow: none;
+                        cursor: pointer;
+                    }
+                    .irs-handle {
+                        top: 5px;
+                        height: 20px;
+                        width: 20px;
+                        background-color: $accent-1;
+                        background: $accent-1;
+                        border: 0;
+                        box-shadow: none;
+                    }
+                    .irs-handle:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .colors{
+                label{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    cursor: pointer;
+                    font-family: $font-primary;
+                    font-weight: 600;
+                    font-size: 21px;
+                    line-height: 130%;
+                    @media(max-width: 992px) {
+                        font-size: 20px;
+                    }
+                    @media(max-width: 767px) {
+                        font-size: 18px;
+                    }
+                    @media(max-width: 575px) {
+                        font-size: 16px;
+                    }                  
+                    input{
+                        display: none;
+                    }
+                    .color{
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 8px;    
+                        &.non-selected{
+                            border: 0;
+                        }
+                        &.selected{ 
+                            border: 2px solid $white;
+                            width: 22px;
+                            height: 22px;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+}

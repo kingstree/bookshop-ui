@@ -1,0 +1,249 @@
+// Hero Banner-1
+.hero-banner-1 {
+    width: 100%;
+    position: relative;
+    background: $lightest-gray;
+    .content{
+        position: relative;
+        h1{
+            @include media-query(767px) {
+                font-size: 34px;
+            }
+        }
+        .img-block-sm{
+            img{
+                @include media-query(492px) {
+                    padding-top: 16px;
+                }
+            }
+        }
+        .img-block-lg{
+            position: relative;
+            .discount-block{
+                position: absolute;
+                left: -136px;
+                width: 136px;
+                height: 160px;
+                background-color: $accent-2;
+                @include media-query(1399px) {
+                    height: 120px;
+                    width: 120px;
+                    left: -120px;
+                }
+                @include media-query(992px) {
+                    height: 90px;
+                    width: 90px;
+                    left: -90px;
+                }
+                
+                .block{
+                    width: 160px;
+                    height: 160px;
+                    border-radius: 100px;
+                    display: grid;
+                    align-content: center;
+                    background-color: $accent-1;
+                    position: absolute;
+                    left: -82px;
+                    text-align: center;
+                    @include media-query(1399px) {
+                        width: 120px;
+                        height: 120px;
+                        left: -50px;
+                    }
+                    @include media-query(992px) {
+                        height: 90px;
+                        width: 90px;
+                    }
+                    h3{
+                        @include media-query(1399px) {
+                            font-size: 32px;
+                        } 
+                        @include media-query(1199px) {
+                            font-size: 26px;
+                        } 
+                    }
+                    h4{
+                        @include media-query(1399px) {
+                            font-size: 22px;
+                        }
+                        @include media-query(1199px) {
+                            font-size: 17px;
+                        }
+                    }
+                }
+             }
+        }
+        .our-community{
+            position: absolute;
+            left: 40%;
+            bottom: 64px;
+            transform: translate(-38%, 0px);
+            flex-wrap: wrap;
+            display: flex;
+            gap: 16px;
+            @include media-query(1399px) {
+                left: 35%;
+                bottom: -20px;
+            }
+            @include media-query(992px) {
+                left: 20%;
+            }
+            @include media-query(767px) {
+                position: relative;
+                left: auto;
+                bottom: auto;
+                transform: translate(0);
+                margin-top: 32px;
+            }
+            @include media-query(492px) {
+                justify-content: center;
+                gap: 8px;
+            }
+            .community-block{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                .community-img{
+                    margin-right: 16px;
+                    img{
+                        border: 1px solid $white;
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 48px;
+                        margin-right: -16px;
+                        position: relative;
+                        z-index: 20;
+                        &:nth-child(2){
+                            z-index: 15;
+                        }
+                        &:nth-child(3){
+                            z-index: 10;
+                        }
+                        &:nth-child(4){
+                            z-index: 5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Multi Items Bar
+.benifits{
+    border-radius: 15px;
+    box-shadow: $shadow;
+    padding: 16px 24px;
+    .benifits-block{
+        display: flex;
+        align-items: start;
+        gap: 16px;
+    }
+}
+
+// Hero Banner-2 
+.hero-banner-2{
+    .banner-2{
+
+        .banner-images{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 24px;
+            @include media-query(768px) {
+                gap: 16px;
+            }
+            @include media-query(375px) {
+                margin: 0 15px;
+                gap: 8px;
+            }
+            img{
+                border-radius: 24.149px;
+                box-shadow: $shadow-2;
+                @include media-query(1399px) {
+                    width: 210px;
+                    height: auto;
+                }
+                @include media-query(1199px) {
+                    width: 180px;
+                    height: auto;
+                }
+                @include media-query(992px) {
+                    width: 160px;
+                    height: auto;
+                }
+                @include media-query(899px) {
+                    width: 140px;
+                    height: auto;
+                }
+                @include media-query(768px) {
+                    width: 110px;
+                    height: auto;
+                }  
+                @include media-query(575px) {
+                    border-radius: 15px;
+                }  
+                @include media-query(375px) {
+                    width: 100px;
+                }
+                &.stair-image-1{
+                    margin-top: 136px;
+                    @include media-query(669px) {
+                        display: none;
+                    }
+                }
+                &.stair-image-2{
+                    margin-top: 88px;
+                }
+                &.stair-image-3{
+                    margin-top: 40px;
+                }
+                &.stair-image-4{
+                    margin-top: 88px;
+                }
+                &.stair-image-5{
+                    margin-top: 136px;
+                    @include media-query(669px) {
+                        display: none;
+                    }
+                }
+            }   
+        }
+        .banner-text{
+            @include media-query(899px) {
+                padding: 25px 0 0 0;
+            }
+            h1{
+                font-weight: 600;
+                margin-bottom: 8px;
+                @include media-query(1199px) {
+                    font-size: 52px;
+                }
+                @include media-query(992px) {
+                    font-size: 42px;
+                }
+                @include media-query(768px) {
+                    font-size: 32px;
+                }
+                @include media-query(375px) {
+                    font-size: 27px;
+                }
+            }
+            h5{
+                font-weight: 500;
+            }
+            a{
+                margin: 24px auto;
+            }
+            
+        }
+       
+    }
+}
+
+
+
+
+
+

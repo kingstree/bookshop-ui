@@ -1,0 +1,248 @@
+// Check Out
+form{
+    .form-control{
+        background-color: transparent;
+        border: 1px solid $medium-gray;
+        border-radius: 30px;
+        color: $dark-gray;
+        padding: 15px;
+        &.notes{
+            border-radius: 10px;
+            border: none;
+            box-shadow: $shadow
+        }
+    }
+}
+.checkout{
+    .checkout-form{
+        padding: 0 8px;
+        .sw-theme-basic{
+            border: 0;
+        }
+        .sw-toolbar{
+            .sw-btn{
+                display: none;
+            }
+        }
+        .sw-toolbar-elm{
+            display: flex;
+            justify-content: end;
+            button{
+                font-family: $font-primary;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 150%;
+                letter-spacing: 0.32px;
+                width: fit-content;
+                transition: $transition;
+                padding: 8px 16px;
+                background-color: $accent-1;
+                color: $white;
+                border-radius: 30px;
+                border: 0px;
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                    transition: $transition;
+                    box-shadow: $shadow;
+                }
+            }
+        }
+        .nav{
+            box-shadow: none !important;
+            margin: 0;
+            padding: 0;
+            height: fit-content;
+            .nav-item{
+                padding: 16px 0;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                // span{
+                // }
+                .nav-link{
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    gap: 8px;
+                    padding: 0;
+                    margin: 0;
+                    height: auto;
+                    min-height: auto;
+                    margin-right: 0;
+                    border: 0;
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    margin-right: 16px;
+                    span{
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 150%; 
+                        letter-spacing: 0.32px;
+                        color: $dark-gray;
+                        position: relative;
+                        background-color: $white;
+                        padding-right: 10px;
+
+                        &::after{
+                            content: "";
+                            height: 2px;
+                            background: $medium-gray;
+                            position: absolute;
+                            min-width: 230px;
+                            position: absolute;
+                            left: 100%;
+                            top: 50%;
+                        }
+                    }
+                    &:after{
+                        display: none;
+                    }
+                    &.active{
+                        span{
+                            color: $black;
+                        }
+                    }
+                    .num{
+                        height: 24px;
+                        width: 24px;
+                        display: grid;
+                        justify-content: center;
+                        align-content: center;
+                        border-radius: 24px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 150%;
+                        background-color: $accent-1;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    .order-detail{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        background: $lightest-gray;
+        padding: 24px;
+        border-radius: 20px;
+        box-shadow: $shadow;
+        .sub-total{
+            display: flex;
+            justify-content: space-between;
+        }
+        .find-books-input{
+            position: relative;
+            .search-input{
+              display: flex;
+              width: 100%;
+              padding: 14px 8px 14px 24px;
+              justify-content: space-between;
+              align-items: center;
+              border-radius: 30px;
+              border: 1px solid $dark-gray;
+              background-color: $lightest-gray;
+              &.shop-listing{
+                width: 306px;
+              }
+            }
+            img{
+              position: absolute;
+              top: 6px;
+              right: 10px;
+              background-color: $accent-1;
+              padding: 8px;
+              border-radius: 30px;
+            }
+        }
+    }
+    .contact-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 24px;
+    }
+    .card-select{
+        position: relative;
+        img{
+            position: absolute;
+            top: 16px;
+            left: 16px;
+        }
+    }
+    .icon-block{
+        position: relative;
+        i{
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 24px;
+            color: $dark-gray;
+        }
+    }
+    .filter-checkbox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            padding: 0;
+            display: none;
+            border: 1px solid $medium-black;
+            cursor: pointer;
+            &:checked + label{
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 3px;
+                    left: 6px;
+                    width: 5px;
+                    height: 12px;
+                    z-index: 10;
+                    border: solid $medium-black;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        label {
+            position: relative;
+            cursor: pointer;
+            color: $dark-gray;
+            font-family: $font-primary;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            @media(max-width: 992px) {
+                font-size: 14px;
+            }
+            @media(max-width: 767px) {
+                font-size: 12px;
+            }
+            @media(max-width: 575px) {
+                font-size: 12px;
+            }    
+            &:before {
+                content: "";
+                -webkit-appearance: none;
+                background: transparent;
+                border: 1px solid $medium-black;
+                border-radius: 3px;
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                cursor: pointer;
+                margin-right: 8px;
+                margin-top: -3px;
+            }
+        }
+    }
+}
+
+
+
+
